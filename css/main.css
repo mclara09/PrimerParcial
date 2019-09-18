@@ -311,12 +311,16 @@ footer .social-links {
 
  .about .container{
 display: grid;
-grid-auto-rows:5em 1fr ;
+grid-auto-rows:6em 1fr ;
 grid-auto-columns:1fr 1fr;    
+ }
+ header a {
+     margin-left: 1em;
  }
 .about .container h2{
     grid-row: 1;
      grid-column: 1/3;
+     
 }
 
  .bio-info{
@@ -339,6 +343,7 @@ grid-auto-columns:1fr 1fr;
  .social-links li{
      font-size:20px;
      margin:0;
+     margin-bottom: 1em;
  }
  .big-hero  p{
  font-size: 18px;
@@ -354,9 +359,14 @@ grid-auto-columns:1fr 1fr;
 }
 
 .green-area ul{
-    margin-left: 6em;
+    margin-left: 0em;
 }
- 
+.contact-form label{
+font-weight: bold;
+}
+
+
+
 }
 
 
@@ -370,23 +380,41 @@ grid-auto-columns:1fr 1fr;
         margin: 0 auto;
         max-width: 1440px;
     }
+    header a{
+        margin-left: 0px;
+    }
 }
 
 @media only screen and (min-width: 414px){
 .social-links{
   margin:0;
+  margin-bottom: 1.5em;
 }
 .fab.fa-github{
     font-size: 1.5em;
 }
 .fab.fa-twitter{
     font-size: 1.5em;  
-    margin-bottom: 0.5em;
+    
     margin-left: 0.5em;
 }
 .contact-form input[type=submit]{
     margin-bottom: 1.5em;
 }
+.green-area article{
+    width: 20em;
+    height: 25em;
+    margin-left: 2em;
+}
+.about .container{
+  margin:0px 1em;
+}
+.header a{
+    margin-left:1em;
+}
+.big-hero  p{
+    font-size: 13px;
+    }
 }
 
 @media only screen and (min-width: 768px){
