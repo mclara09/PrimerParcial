@@ -268,6 +268,15 @@ footer .social-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-right: 3em;
+    }
+    .post{
+        width: 90%;
+    }
+    .post h2{
+        justify-content: center;
+        margin-left: 4em;
+        font-size: 25px;
     }
     
     .post ul li {
@@ -281,6 +290,7 @@ footer .social-links {
     .logo {
         width: 150px;
         margin: 1.5em;
+      
     }
 
     .show-desktop {
@@ -303,16 +313,14 @@ footer .social-links {
     }
     /*ipad*/
     .fas.fa-arrow-circle-down{
-        font-size:3em;
+        font-size:4em;
         color: #0AC693; 
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
     }
-    .big-hero  p{
-       font-size: 17px;
+    .big-hero .container p{
+       font-size: 19px;
        }
-    .post ul{
-    margin-left: 3em;
-    }
+   
     .about {
         margin:0px 3.5em;
     }
@@ -411,7 +419,7 @@ font-weight: bold;
          justify-content: center;
          margin:0px;
          margin-left: 5em;
-        width: 95%;
+      
      }
      .about .container{
         width: 90%;
