@@ -285,6 +285,7 @@ footer .social-links {
 
     .show-desktop {
         display: block;
+        font-size:13px;
     }
 
     .hide-desktop {
@@ -300,8 +301,24 @@ footer .social-links {
         display: flex;
         margin-top: 1em;
     }
-
-
+    /*ipad*/
+    .fas.fa-arrow-circle-down{
+        font-size:3em;
+        color: #0AC693; 
+        margin-bottom: 0.5em;
+    }
+    .big-hero  p{
+       font-size: 17px;
+       }
+    .post ul{
+    margin-left: 3em;
+    }
+    .about {
+        margin:0px 3.5em;
+    }
+    .show-desktop li a:hover{
+        color: #c20000;
+     }
 
 
     /*TODO: FALTA CSS */
@@ -351,9 +368,7 @@ grid-auto-columns:1fr 1fr;
  .show-desktop li a{
      font-size: 15px;
  }
- .show-desktop{
-     margin-right: 3em;
- }
+ 
 
 .show-desktop li a:hover{
    color: #c20000;
@@ -389,6 +404,9 @@ font-weight: bold;
     header a{
         margin-left: 0px;
     }
+    .show-desktop li a:hover{
+        color: #c20000;
+     }
 }
 
 @media only screen and (min-width: 414px){
@@ -421,16 +439,7 @@ font-weight: bold;
 .big-hero  p{
     font-size: 13px;
     }
+    
 }
 
-@media only screen and (min-width: 768px){
-    /*ipad*/
-    .fas.fa-arrow-circle-down{
-     font-size:3em;
-     color: #0AC693; 
-     margin-bottom: 0.5em;
- }
- .big-hero  p{
-    font-size: 17px;
-    }
-}
+
