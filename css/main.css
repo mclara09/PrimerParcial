@@ -222,7 +222,7 @@ tambien un border de esquina superior derecha y inferior izquierda a cada casill
 }
 
 /* Decorando placeholder */
-
+/*es un marcador, página web temporal*/
 ::-webkit-input-placeholder { 
     color: #D7DEE6; 
 } 
@@ -232,7 +232,7 @@ tambien un border de esquina superior derecha y inferior izquierda a cada casill
 ::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
  
 :-ms-input-placeholder { color: #D7DEE6; }
-/*este selecto es especia para referir al boton de contactar*/
+/*este selector es especialmente para referir al boton de contactar*/
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
@@ -252,29 +252,31 @@ footer{
 footer .social-links {
     margin: 0;
 }
-/**/
+/*aqui en la clase menu se le agrego un color de fondo
+en un psicionamiento unico,Cuando varios elementos se superponen, z-order determina cuales cubren a otros.
+ tambien determina aqui la anchura y altura de este*/
 .menu {
     background-color: #112935;
     position: absolute;
     z-index: 20;
-    top: 60px;
+    top: 60px;/*especifica parte de posicion e un elemento posicionado*/
     right: 0;
     width: 100vw;
     height: calc(100vh - 60px);
 }
-/**/
+/*le quital el estilo de la lista, texto alineado a la izquierda, y padding de 1em*/
 .menu {
     list-style: none;
     text-align: left;
     padding: 1em;
 }
-/**/
+/* (clase menu, etiqueta li)display por bloque, tiene un padding y un margen superior de 5px*/
 .menu li {
     display: block;
     padding: 0.5em;
     margin-top: 5px;
 }
-/**/
+/*para referirse a los enlace de este, un color blanco y sin niguna decoracion de texto*/
 .menu li a {
     color: white;
     text-decoration: none;
@@ -283,7 +285,7 @@ footer .social-links {
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
-  /**/
+  /*le quito el estilo de la lista de esta etiqueta un wrap posicionado centrado con un margen a la derecha */
     .post ul {
         list-style: none;
         display: flex;
@@ -291,17 +293,18 @@ footer .social-links {
         justify-content: center;
         margin-right: 3em;
     }
-    /**/
+    /*anchura de 90%*/
     .post{
         width: 90%;
     }
-    /**/
+    /*titulo de esta clase centrado al centro, margen de a la izquierda de tamaño de 25px*/
     .post h2{
         justify-content: center;
         margin-left: 4em;
         font-size: 25px;
     }
-    /**/
+    /*para referirse a la etiqueta li , posee un minimo y maximo de altura
+    margen arriba y abajo de 1rem, derecha y izquierda de 2rem*/
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
@@ -309,22 +312,21 @@ footer .social-links {
         flex: 1 0 300px;
     }
 
-    /**/
+    /*anchura del logo de 150 y margen a todos sus lados*/
     .logo {
         width: 150px;
         margin: 1.5em;
-      
     }
-     /**/
+     /*tipo monitor bloque y tamaño*/
     .show-desktop {
         display: block;
         font-size:13px;
     }
-     /**/
+     /*se le quita*/
     .hide-desktop {
         display: none;
     }
-    /**/
+    /*se realiza un flex para arreglar el menu y una posicion estatica, margen superior */
     .menu {
         background-color: #112935; 
         position: static;
@@ -335,21 +337,21 @@ footer .social-links {
         margin-top: 1em;
     }
     /*ipad*/
-    /**/
+    /*agrande el circulo le aplique color y le di un marque inferior*/
     .fas.fa-arrow-circle-down{
         font-size:4em;
         color: #0AC693; 
         margin-bottom: 1em;
     }
-    /**/
+    /*aqui hice mas grande la letra*/
     .big-hero .container p{
        font-size: 19px;
        }
-   /**/
+   /*aplique un margen a la derecha e izquierda de toda la seccion*/
     .about {
         margin:0px 3.5em;
     }
-    /**/
+    /*aqui hice que al mover el puntero sobre las palabras del menu cambiara a color rojo*/
     .show-desktop li a:hover{
         color: #c20000;
      }
@@ -358,93 +360,89 @@ footer .social-links {
 } 
 
 @media only screen and (min-width: 1024px) {
-/**/
+/*En este selecione la seccion con su div para definir el tamaño de  lineas y columnas con un grid*/
  .about .container{
 display: grid;
 grid-auto-rows:6em 1fr ;
 grid-auto-columns:1fr 1fr; 
 
  }
- /**/
- .logo a {
-     margin-left: 3em;
- }
- /**/
+
+  /*aqui defini que lugar y espacio queria que ocupara el titulo*/
 .about .container h2{
     grid-row: 1;
      grid-column: 1/3;
     
 }
-/**/
-.post {
-  width: 100%;
-
-}
-/**/
-.post h2{
-  margin-left: 2em;
-}
-
-
-
-
-
-body section div ul li:nth-child(3){
- 
-}
-/**/
+/*aqui asigne que tuviera dos filas y una columna*/
  .bio-info{
      grid-row: 2;
      grid-column: 1;
  }
-/**/
+ /*aqui movi el logo de naldana a la derecha*/
+ .container .header a{
+     margin-left: 3em;
+ }
+
+/*le dije que ocupara el ancho del 100%*/
+.post {
+  width: 100%;
+
+}
+/*el titulo lo movi a la derecha*/
+.post h2{
+  margin-left: 2em;
+}
+
+/*hice mas pequeño de ancho el boton de contactar*/
  .contact-form input[type=submit]{
     width: 200px;
  }
- /**/
+ /*cambie el tamaño y color del boton de flechita hacia abajo
+ tambie le agregue un margen hacia abajo*/
  .fas.fa-arrow-circle-down{
      font-size:4em;
      color: #0ac693; 
      margin-bottom: 1.5em;
  }
- /**/
+ /*le quite tamaño al container y margen*/
  .social-links{
      font-size:0px;
      margin:0;
  }
- /**/
+ /*agrande el tamaño, quite el margen que ya tenia y puse un margue hacia abajo para subirlos*/
  .social-links li{
      font-size:20px;
      margin:0;
      margin-bottom: 1em;
  }
- /**/
+ /*aqui agrande el tamaño de la letra en px*/
  .big-hero  p{
  font-size: 18px;
  }
- /**/
+ /*agrande la letra del menu*/
  .show-desktop li a{
      font-size: 15px;
  }
  
-/**/
+/*aqui hice que al mover el puntero sobre las palabras del menu cambiara a color rojo*/
 .show-desktop li a:hover{
    color: #c20000;
 }
-/**/
+/*agrege un ancho y altura de esta seccion*/
 .green-area article{
     width: 20em;
     height: 25em;
 }
-/**/
+/*quite el margen hacia a la derecha*/
 .green-area ul{
     margin-left: 0em;
 }
-/**/
+/*agrege negrita a las palabras*/
 .contact-form label{
 font-weight: bold;
 }
-/**/
+/*quite margen a la izquierda y agrege margen a la derecha*/
 .post ul {
     margin-right: 0px;
     margin-left:3em;
@@ -459,76 +457,76 @@ font-weight: bold;
 
 @media only screen and (min-width: 1440px) {
 
-    /*TODO: FALTA CSS */
+    /*se le agreo a todos los cainer una anchura definida de 80% y una max anchura de la pantalla */
     .container {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
     }
-    /**/
+    /*quite el margen hacia la derecha*/
     header a{
         margin-left: 0px;
     }
-    /**/
+    /*aqui hice que al mover el puntero sobre las palabras del menu cambiara a color rojo*/
     .show-desktop li a:hover{
         color: #c20000;
      }
-     /**/
+     /*justifique el contenido hacia el centro, quite margue y agrege solo hacia la derecha*/
      .about{
          justify-content: center;
          margin:0px;
          margin-left: 5em;
       
      }
-     /**/
+     /*puse que abarcara el 90% de ancho*/
      .about .container{
         width: 90%;
      }
-     /**/
+     /*aumente el tamaño de fuente*/
      .menu li a {
         font-size: 17px;
     }
-    /**/
+    /*aplique que abarcara el 105% de la pantalla*/
     .header{
         width: 105%;
     }
 }
 
 @media only screen and (min-width: 414px){
-/**/
+/*quite el margen y agrege un margen de abajo para subirlo un poco*/
 .social-links{
   margin:0;
   margin-bottom: 1.5em;
 }
-/**/
+/*agrande el icono de github*/
 .fab.fa-github{
     font-size: 1.5em;
 }
-/**/
+/*agrande el icono de twitter y le agrege yn margen hacia la derecha para separalos*/
 .fab.fa-twitter{
     font-size: 1.5em;  
     
     margin-left: 0.5em;
 }
-/**/
+/*aqui agrege un margen hacia abajo al boton de contactar*/
 .contact-form input[type=submit]{
     margin-bottom: 1.5em;
 }
-/**/
+/*a cada articulo de esta seccion le agrege una altura y un ancho tambien un margen a la derecha*/
 .green-area article{
     width: 20em;
     height: 25em;
     margin-left: 2em;
 }
-/**/
+/*agrege un margen a los lados de 1em*/
 .about .container{
   margin:0px 1em;
 }
-/**/
+/*agrege un margen a la derecha al logo naldana*/
 .header a{
     margin-left:1em;
 }
-/**/
+/*nada mas agrande la letra*/
 .big-hero  p{
     font-size: 13px;
     }
